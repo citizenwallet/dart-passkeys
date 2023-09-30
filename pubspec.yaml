@@ -42,8 +42,8 @@ flutter:
         fileName: dart_passkeys_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
-  assets:
-    - web/dist/passkeys.js
+  # assets:
+  # - lib/passkeys.js
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
