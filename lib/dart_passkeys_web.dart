@@ -23,4 +23,10 @@ class DartPasskeysWeb extends DartPasskeysPlatform {
     final version = html.window.navigator.userAgent;
     return version;
   }
+
+  /// Returns a [String] containing the hello world text.
+  @override
+  Future<String> helloWorld() async {
+    return 'Hello, World!';
+  }
 }
