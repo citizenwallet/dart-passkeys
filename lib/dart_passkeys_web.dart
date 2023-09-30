@@ -77,6 +77,7 @@ class DartPasskeysWeb extends DartPasskeysPlatform {
   /// Returns a [String] containing the hello world text.
   @override
   Future<String> helloWorld() async {
+    await sendMethodMessage('helloWorld', null);
     return 'Hello, World!';
   }
 }
