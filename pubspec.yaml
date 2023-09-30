@@ -1,6 +1,6 @@
 name: dart_passkeys
 description: A new Flutter plugin project.
-version: 0.0.8
+version: 0.0.9
 homepage:
 
 environment:
@@ -42,8 +42,8 @@ flutter:
         fileName: dart_passkeys_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
-  assets:
-    - assets/passkeys.js
+  # assets:
+  #   - assets/passkeys.js
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
