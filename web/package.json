@@ -4,6 +4,7 @@
     "main": "./dist/passkeys.js",
     "private": true,
     "scripts": {
+        "start": "webpack serve --config webpack.dev.config.js",
         "build": "webpack --config webpack.config.js"
     },
     "dependencies": {
