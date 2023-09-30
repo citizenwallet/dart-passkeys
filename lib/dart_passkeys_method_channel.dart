@@ -21,4 +21,10 @@ class MethodChannelDartPasskeys extends DartPasskeysPlatform {
     final result = await methodChannel.invokeMethod<String>('helloWorld');
     return result!;
   }
+
+  @override
+  Future<String> create() async {
+    final result = await methodChannel.invokeMethod<String>('create');
+    return result!;
+  }
 }

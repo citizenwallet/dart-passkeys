@@ -27,38 +27,7 @@ class DartPasskeysWeb extends DartPasskeysPlatform {
   DartPasskeysWeb();
 
   static void registerWith(Registrar registrar) {
-    final MethodChannel channel = MethodChannel(
-      'dart_passkeys',
-      const StandardMethodCodec(),
-      registrar,
-    );
-
     DartPasskeysPlatform.instance = DartPasskeysWeb();
-
-    channel.setMethodCallHandler(DartPasskeysWeb().handleMethodCall);
-
-    //Sets the call from JavaScript handler
-    _jsOnEvent = allowInterop((dynamic event) {
-      print('interop event');
-      //Process JavaScript call here
-    });
-  }
-
-  Future<dynamic> handleMethodCall(MethodCall call) async {
-    print('method call');
-    switch (call.method) {
-      //  case 'sendMethodMessage':
-      //    return sendMethodMessage(call.method, call.arguments);
-      case 'helloWorld':
-        await sendMethodMessage(call.method, call.arguments);
-        return helloWorld();
-      default:
-        throw PlatformException(
-          code: 'Unimplemented',
-          details:
-              'flutter_plugin for web doesn\'t implement \'${call.method}\'',
-        );
-    }
   }
 
   Future<dynamic> sendMethodMessage(String method, String? arguments) async {
@@ -79,5 +48,12 @@ class DartPasskeysWeb extends DartPasskeysPlatform {
   Future<String> helloWorld() async {
     await sendMethodMessage('helloWorld', null);
     return 'Hello, World!';
+  }
+
+  /// Returns a [credential] containing the hello world text.
+  @override
+  Future<String> create() async {
+    await sendMethodMessage('create', '123');
+    return 'created!';
   }
 }

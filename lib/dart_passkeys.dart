@@ -8,4 +8,8 @@ class DartPasskeys {
   Future<String> helloWorld() {
     return DartPasskeysPlatform.instance.helloWorld();
   }
+
+  Future<dynamic> create() {
+    return DartPasskeysPlatform.instance.create();
+  }
 }

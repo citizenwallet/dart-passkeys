@@ -30,4 +30,8 @@ abstract class DartPasskeysPlatform extends PlatformInterface {
   Future<String> helloWorld() {
     throw UnimplementedError('helloWorld() has not been implemented.');
   }
+
+  Future<String> create() {
+    throw UnimplementedError('create() has not been implemented.');
+  }
 }

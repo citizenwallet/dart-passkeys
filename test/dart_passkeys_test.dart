@@ -12,6 +12,9 @@ class MockDartPasskeysPlatform
 
   @override
   Future<String> helloWorld() => Future.value('Hello, World!');
+
+  @override
+  Future<String> create() => Future.value('pk');
 }
 
 void main() {
