@@ -12,7 +12,7 @@ window.jsInvokeMethod = async (method, params) => {
       return create(params);
       break;
     default:
-      console.log("Method not found");
+      console.log("Method not found", method);
       break;
   }
 };
