@@ -18,7 +18,7 @@ import 'package:js/js_util.dart';
 @JS('jsOnEvent')
 external set _jsOnEvent(void Function(dynamic event) f);
 
-@JS()
+@JS('jsInvokeMethod')
 external dynamic jsInvokeMethod(String method, String? params);
 
 /// A web implementation of the DartPasskeysPlatform of the DartPasskeys plugin.
