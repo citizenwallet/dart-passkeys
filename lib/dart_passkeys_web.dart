@@ -31,6 +31,7 @@ class DartPasskeysWeb extends DartPasskeysPlatform {
   }
 
   Future<dynamic> sendMethodMessage(String method, String? arguments) async {
+    print('invoking method $method with arguments $arguments');
     final dynamic response =
         await promiseToFuture(jsInvokeMethod(method, arguments));
     //...
