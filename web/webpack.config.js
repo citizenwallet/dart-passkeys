@@ -4,6 +4,6 @@ module.exports = {
   entry: "./index.js",
   output: {
     filename: "passkeys.js",
-    path: path.resolve(__dirname, "..", "lib"),
+    path: path.resolve(__dirname, "dist"),
   },
 };
