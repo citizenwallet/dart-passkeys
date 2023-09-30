@@ -7,9 +7,11 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockDartPasskeysPlatform
     with MockPlatformInterfaceMixin
     implements DartPasskeysPlatform {
-
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  Future<String> helloWorld() => Future.value('Hello, World!');
 }
 
 void main() {
@@ -25,5 +27,6 @@ void main() {
     DartPasskeysPlatform.instance = fakePlatform;
 
     expect(await dartPasskeysPlugin.getPlatformVersion(), '42');
+    expect(await dartPasskeysPlugin.helloWorld(), 'Hello, World!');
   });
 }
